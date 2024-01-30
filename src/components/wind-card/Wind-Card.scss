@@ -1,0 +1,21 @@
+.app-card {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .app-card_Boundary {
+    height: 15.1rem;
+    width: 20rem;
+    background-color: rgb(254, 254, 254);
+    background-image: url("/assets/images/aang-in-ice.jpg");
+    background-repeat: no-repeat;
+    display: flex;
+    border-radius: 2%;
+    transition: transform .2s;
+  }
+  .app-card_boundary:hover {
+    box-shadow: 0 0 50px 15px #48abe0;
+    transform: scale(1.01);
+    
+  }
+  

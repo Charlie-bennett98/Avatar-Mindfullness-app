@@ -1,0 +1,24 @@
+// @import url(../../partials/_typography.scss);
+
+@font-face {
+    font-family: "Laila";
+    src: url("../../assets/fonts/Laila-Bold.ttf") format("true type");
+    font-style:normal;
+  }
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+
+h1 {
+    font-family: Laila;
+    font-style: normal;
+    font-weight: 600;
+}

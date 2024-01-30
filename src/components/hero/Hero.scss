@@ -1,0 +1,18 @@
+@font-face {
+    font-family: Laila;
+    src: url("../../assets//fonts/Laila-Regular.ttf");
+}
+
+.app-header {
+    display: flex;
+    justify-content: center;
+    font-family: Laila;
+}
+
+
+#air-bending-symbol {
+    height: 4rem;
+    width: 4rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
