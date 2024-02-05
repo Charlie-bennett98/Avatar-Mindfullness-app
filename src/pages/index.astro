@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/header/Header.astro';
+import Hero from '../components/hero/Hero.astro';
+import Form from '../components/form/Form.tsx';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<Header />
+
+		<Hero />
+
+		<Form client:idle/>
+	</main>
+</Layout>
