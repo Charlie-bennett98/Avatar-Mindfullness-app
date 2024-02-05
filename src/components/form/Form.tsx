@@ -1,15 +1,16 @@
-import "./Form.scss";
+import styles from "./Form.module.css";
 import axios from "axios";
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 import WindCard from "../wind-card/Wind-Card";
+import React from "react";
 
-function IsWindSpeedHigh(windSpeed) {
+const IsWindSpeedHigh = (windSpeed: number) => {
   if (windSpeed > 10) return `Wind speed seems to be ${windSpeed + "mph"}, maybe Aang was here`; 
   
   return `wind speed seems to be ${windSpeed + "mph"}, I don't think Aang was here`;
 }
 
-const formLogic = async ({location}) => {
+const formLogic = async ({location}: {location: string}) => {
   const response = await axios.get(
     `https://api.tomorrow.io/v4/weather/realtime?location=${location}&units=metric&apikey=zcrOLG4NfCDoP6VA1XBvDFzCqdUx6PZC`
   )
@@ -26,28 +27,31 @@ const formLogic = async ({location}) => {
 }
 
 const Form = () => {
-  const [windspeed, setWindspeed] = useState(0);
+  const [windspeed, setWindspeed] = useState('')
+  const [location, setLocation] = useState('')
 
-  const handleOnSubmit = async (e) => {
+  const handleOnSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
  
-    const windSpeedValue = await formLogic({location: e.target.location.value})
+    const windSpeedValue = await formLogic({location})
 
     setWindspeed(windSpeedValue)
   }
 
   return (
     <div>
-      <form type="submit" class="app-form" id="form" onSubmit={(e) => void handleOnSubmit(e)}>
+      <form className={styles.form} id="form" onSubmit={handleOnSubmit}>
         <input
-          type="text"     
+          type="text"
           id="location"
-          class="app-form_input"
+          className={styles.input}
           placeholder="location"
           required
+          value={location}
+          onChange={(e) => setLocation(e.target.value)}
         />
 
-        <button type="submit" class="app-form__button">Discover</button>
+        <button type="submit" className={styles.button}>Discover</button>
       </form>
       
       {!!windspeed && <WindCard cardValue={windspeed}/>}
