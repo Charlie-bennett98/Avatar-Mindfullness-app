@@ -10,7 +10,7 @@ const IsWindSpeedHigh = (windSpeed: number) => {
   return `wind speed seems to be ${windSpeed + "mph"}, I don't think Aang was here`;
 }
 
-const formLogic = async ({location}: {location: string}) => {
+const formLogic = async ({location}: {location: string}) => { 
   const response = await axios.get(
     `https://api.tomorrow.io/v4/weather/realtime?location=${location}&units=metric&apikey=zcrOLG4NfCDoP6VA1XBvDFzCqdUx6PZC`
   )

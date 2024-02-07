@@ -1,9 +1,13 @@
 .card {
-  height: 15.1rem;
-  width: 20rem;
+  height: 40.1vh;
+  width: 40vh;
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  background-image: url("../../../public/images/aang-in-ice.jpg");
+  background-repeat: none;
+  color: rgb(209, 232, 237);
+  border-radius: 5px;
       
     /* &_boundary {
       background-color: rgb(254, 254, 254);

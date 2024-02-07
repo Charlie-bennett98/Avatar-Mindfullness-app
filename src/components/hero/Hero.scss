@@ -1,0 +1,33 @@
+
+@font-face {
+    font-family: Laila;
+    src: url("/fonts/Laila-Regular.ttf");
+}
+
+.app-hero {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    
+  }
+  .app-header {
+    display: flex;
+    justify-content: center;
+    font-family: Laila;
+  }
+
+  #air-bending-symbol {
+    height: 4rem;
+    width: 4rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
