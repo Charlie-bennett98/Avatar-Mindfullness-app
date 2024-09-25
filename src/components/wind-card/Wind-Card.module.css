@@ -1,13 +1,20 @@
 .card {
   height: 40.1vh;
   width: 40vh;
+  margin: 20px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  background-image: url("../../../public/images/aang-in-ice.jpg");
-  background-repeat: none;
-  color: rgb(209, 232, 237);
-  border-radius: 5px;
+  background-image: url("images/aang-in-ice.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(66, 66, 65);
+  font-weight: bold;
+  border-radius: 7px;
+  border-width: 1px;
+  border-color: white;
+  border-style: solid;
+ 
       
     /* &_boundary {
       background-color: rgb(254, 254, 254);
@@ -25,5 +32,11 @@
   display: flex;
   border-radius: 2%;
   transition: transform .2s;
+  font-size: 17px;
+  padding: 10px;
 }
-  
+/* .wind-card_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
