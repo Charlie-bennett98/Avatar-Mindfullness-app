@@ -5,15 +5,9 @@ import avatarQuotes from "../../Data/carousel-data.json";
 
 //rafc is a shortcut to react functional component boiler plate 
 
+const carousel = () => {
 
-function TestFunction() {
-  return(
-  <p>hello</p>
-  )
-}
-const Quotes = () => {
-
-  const [newQuote, setNewQuote] = useState("")
+  const [newQuote, setNewQuote] = useState("first render")
 
 
   const quoteArr = [
@@ -32,35 +26,42 @@ const Quotes = () => {
   }
 ]
 
+
+function setRandomQuote() {
+  let i = quoteArr.length - 1;
+  const j = Math.floor(Math.random() * (i + 1))
+  const quote = quoteArr[j]
+  const newRandomQuote = quote.quote;
+  setNewQuote(newRandomQuote) 
+  console.log(newQuote)
+  console.log("function has been envoked")
+  return(
+    newQuote
+  )
+}
+
+const RandomQuote = () => {
+  setRandomQuote
+  console.log(setRandomQuote)
+  return (
+  <p>{newQuote}</p>
+)
+}
+
+
+//   setInterval(setRandomQuote, 1000); {
+//     return(
+//     <p>{newQuote}</p>
+//     )
+//   }
+// }
+
 // const shuffle = (array) => { 
 //   for (let i = array.length - 1; i > 0; i--) { 
 //     const j = Math.floor(Math.random() * (i + 1)); 
 //     [array[i], array[j]] = [array[j], array[i]]; 
 //   } 
 // }; 
-
-function newArray() {
-  let i = quoteArr.length - 1;
-  const j = Math.floor(Math.random() * (i + 1))
-  const quote = quoteArr[j]
-  const newRandomQuote = quote.quote;
-  setNewQuote(newRandomQuote)
-  console.log(newQuote)
-}
-
-
-
-
-return(
-  <div>
-    {<p>{newQuote}</p>}
- </div>
- )
-}
-
-
-
- const carousel = () => {
 
   const dataQuotes = avatarQuotes.quotes;
 
@@ -70,7 +71,7 @@ return(
 
   const [shuffledArr, setShuffledArr] = useState([])
 
-const [activeSlide, setActiveSlide] = useState("true")
+ const [activeSlide, setActiveSlide] = useState("true")
 
 
 // const arrayDataItems = shuffledArray.map(quote => 
@@ -79,21 +80,10 @@ const [activeSlide, setActiveSlide] = useState("true")
 //   </article>
 // )
 
-
-function btnClick (click) {
-  const offset = click.dataset.carousel-btn === "next" ? 1 : -1
-  const slides = click.closest(["data-slides"])
-}
-
-
-
   return ( 
-    <>
     <div className="carousel-component">
-      <Quotes />      
-      <TestFunction />
+      <RandomQuote />
     </div>
-    </>
   )
 }
 export default carousel;
