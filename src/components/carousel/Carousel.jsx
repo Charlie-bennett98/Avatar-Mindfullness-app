@@ -5,7 +5,7 @@ import avatarQuotes from "../../Data/carousel-data.json";
 
 //rafc is a shortcut to react functional component boiler plate 
 
-const carousel = () => {
+const Carousel = () => {
 
   const [newQuote, setNewQuote] = useState("first render")
 
@@ -86,7 +86,8 @@ const RandomQuote = () => {
     </div>
   )
 }
-export default carousel;
+
+export default Carousel;
 
 
 
