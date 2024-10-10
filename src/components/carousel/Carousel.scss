@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: Laila;
-    src: url("/fonts/Laila-Regular.ttf");
+    src: url("/fonts/Laila-Bold.ttf");
 }
 
 * {
@@ -15,7 +15,7 @@
 .carousel-component {
     display: flex;
     flex-direction: row;
-    width: 600px;
+    width: 100%;
     height: 300px;
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
@@ -23,8 +23,8 @@
     position: relative;
     justify-content: center;
     align-items: center;
-
 }
+
 
 .arrow {
 padding: 2vw;
@@ -88,7 +88,16 @@ position: absolute;
     padding: 0.5rem;
 }
 
-.quoteText {
-    color: black;
-    font-size: 10px;
+.quote {
+    color: rgb(67, 65, 65);
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    margin-bottom: 100px;
+    font-weight: bold;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    position: relative;
 }

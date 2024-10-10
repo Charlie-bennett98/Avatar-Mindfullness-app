@@ -5,8 +5,8 @@ import WindCard from "../wind-card/Wind-Card";
 import React from "react";
 
 const IsWindSpeedHigh = (windSpeed: number) => {
-  if (windSpeed > 10) return `Wind speed seems to be ${windSpeed + "mph"}, maybe Aang was here`; 
-  return `wind speed seems to be ${windSpeed + "mph"}, I don't think Aang was here`;
+  if (windSpeed > 10) return `Wind speed seems to be ${windSpeed + "mph"}, prehapse the avatar has returned and the legends are true.`; 
+  return `wind speed seems to be ${windSpeed + "mph"}, It seems the story's are just legend afterall has returned and Aang was here`;
 }
 
 const formLogic = async ({location}: {location: string}) => { 
